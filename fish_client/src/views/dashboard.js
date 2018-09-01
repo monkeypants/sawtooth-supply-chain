@@ -36,9 +36,9 @@ const Dashboard = {
 	  ' multiple Agents have (delegated) authority to issue',
 	  ' Certificates on behalf of a Regulator.',
 	  ' Any node in the network can access and verify',
-	  ' certificates. Some nodes may be certificate issuers,'
-	  ' other nodes may not have any local authorised Agents.'
-	  ' A node without agents could still verify certificates'
+	  ' certificates. Some nodes may be certificate issuers,',
+	  ' other nodes may not have any local authorised Agents.',
+	  ' A node without agents could still verify certificates',
 	  ' that have been issued at other nodes.'))
     ]
   }

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "certificate",
+    "properties": [
+        {
+          "name": "cert_type",
+          "dataType": 4,
+          "required": true
+        },
+    ]
+  }
+]

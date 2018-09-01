@@ -35,9 +35,9 @@ const authorizableProperties = [
 ]
 
 /**
- * The Form for tracking a new fish.
+ * The Form for tracking a new certificate.
  */
-const AddFishForm = {
+const AddCertForm = {
   oninit (vnode) {
     // Initialize the empty reporters fields
     vnode.state.reporters = [
@@ -54,14 +54,14 @@ const AddFishForm = {
   },
 
   view (vnode) {
-    return m('.fish_form',
+    return m('.cert_form',
              m('form', {
                onsubmit: (e) => {
                  e.preventDefault()
                  _handleSubmit(vnode.attrs.signingKey, vnode.state)
                }
              },
-             m('legend', 'Track New Fish'),
+             m('legend', 'Track New Certificate'),
              _formGroup('Serial Number', m('input.form-control', {
                type: 'text',
                oninput: m.withAttr('value', (value) => {
@@ -69,34 +69,35 @@ const AddFishForm = {
                }),
                value: vnode.state.serialNumber
              })),
-             _formGroup('Species (ASFIS 3-letter code)', m('input.form-control', {
+             _formGroup('Certificate Type (3-letter code)', m('input.form-control', {
                type: 'text',
                oninput: m.withAttr('value', (value) => {
-                 vnode.state.species = value
+                 vnode.state.cert_type = value
                }),
-               value: vnode.state.species
+               value: vnode.state.cert_type
              })),
 
-             layout.row([
-               _formGroup('Length (m)', m('input.form-control', {
-                 type: 'number',
-                 min: 0,
-                 step: 'any',
-                 oninput: m.withAttr('value', (value) => {
-                   vnode.state.lengthInCM = value
-                 }),
-                 value: vnode.state.lengthInCM
-               })),
-               _formGroup('Weight (kg)', m('input.form-control', {
-                 type: 'number',
-                 step: 'any',
-                 oninput: m.withAttr('value', (value) => {
-                   vnode.state.weightInKg = value
-                 }),
-                 value: vnode.state.weightInKg
-               }))
-             ]),
-
+             /*layout.row([
+              *  _formGroup('Length (m)', m('input.form-control', {
+              *   type: 'number',
+              *   min: 0,
+              *   step: 'any',
+              *   oninput: m.withAttr('value', (value) => {
+              *     vnode.state.lengthInCM = value
+              *   }),
+              *   value: vnode.state.lengthInCM
+              * })),
+              * _formGroup('Weight (kg)', m('input.form-control', {
+              *   type: 'number',
+              *   step: 'any',
+              *   oninput: m.withAttr('value', (value) => {
+              *     vnode.state.weightInKg = value
+              *   }),
+              *   value: vnode.state.weightInKg
+              * }))
+	      *]),
+	      */
+	     /*
              layout.row([
                _formGroup('Latitude', m('input.form-control', {
                  type: 'number',
@@ -119,7 +120,7 @@ const AddFishForm = {
                  value: vnode.state.longitude
                }))
              ]),
-
+	      */
              m('.reporters.form-group',
                m('label', 'Authorize Reporters'),
 
@@ -186,7 +187,7 @@ const _updateReporters = (vnode, reporterIndex) => {
 const _handleSubmit = (signingKey, state) => {
   const recordPayload = payloads.createRecord({
     recordId: state.serialNumber,
-    recordType: 'fish',
+    recordType: 'certificate',
     properties: [
       {
         name: 'species',
@@ -224,7 +225,7 @@ const _handleSubmit = (signingKey, state) => {
     }))
 
   transactions.submit([recordPayload].concat(reporterPayloads), true)
-    .then(() => m.route.set(`/fish/${state.serialNumber}`))
+    .then(() => m.route.set(`/certs/${state.serialNumber}`))
 }
 
 /**
@@ -235,4 +236,4 @@ const _formGroup = (label, formEl) =>
     m('label', label),
     formEl)
 
-module.exports = AddFishForm
+module.exports = AddCertForm

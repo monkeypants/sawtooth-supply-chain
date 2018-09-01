@@ -500,7 +500,7 @@ const AuthorizeReporter = {
   }
 }
 
-const FishDetail = {
+const CertDetail = {
   oninit (vnode) {
     _loadData(vnode.attrs.recordId, vnode.state)
     vnode.state.refreshId = setInterval(() => {
@@ -522,7 +522,7 @@ const FishDetail = {
     let custodian = vnode.state.custodian
     let record = vnode.state.record
     return [
-      m('.fish-detail',
+      m('.cert-detail',
         m('h1.text-center', record.recordId),
         _row(
           _labelProperty('Created',
@@ -750,4 +750,4 @@ const _revokeAuthorization = (record, reporterKey, properties) => {
   })
 }
 
-module.exports = FishDetail
+module.exports = CertDetail

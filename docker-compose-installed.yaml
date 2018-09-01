@@ -84,12 +84,12 @@ services:
     depends_on:
       - server
 
-  fish-client:
-    image: supply-fish-client-installed:${ISOLATION_ID}
-    container_name: supply-fish-client-installed
+  cert-client:
+    image: supply-cert-client-installed:${ISOLATION_ID}
+    container_name: supply-cert-client-installed
     build:
       context: .
-      dockerfile: fish_client/Dockerfile-installed
+      dockerfile: cert_client/Dockerfile-installed
     expose:
       - 80
     ports:

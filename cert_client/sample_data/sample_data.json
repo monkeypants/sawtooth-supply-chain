@@ -1,97 +1,42 @@
 {
   "records": [
     {
-      "recordId": "1-4m-4-f1sh",
-      "recordType": "fish",
+      "recordId": "1-4m-4-cert",
+      "recordType": "certificate",
       "properties": [
           {
-            "name": "species",
+            "name": "cert_type",
             "dataType": 4,
-            "stringValue": "BFT"
-          },
-          {
-            "name": "length",
-            "dataType": 3,
-            "numberValue": 2257000
-          },
-          {
-            "name": "weight",
-            "dataType": 3,
-            "numberValue": 247096000
-          },
-          {
-            "name": "location",
-            "dataType": 7,
-            "locationValue": {
-              "latitude": 42456486,
-              "longitude": -67982434
-            }
-          }
+            "stringValue": "ABC"
+          }          }
       ],
       "ownerIndex": 0,
       "custodianIndex": 2,
       "reporterIndex": 1,
-      "reportableProperties": ["temperature", "location", "tilt", "shock"]
+      "reportableProperties": []
     },
-
     {
-      "recordId": "1-4m-sm0l-f1sh",
-      "recordType": "fish",
+      "recordId": "1-4m-sm0l-cert",
+      "recordType": "certificate",
       "properties": [
           {
-            "name": "species",
+            "name": "cert_type",
             "dataType": 4,
-            "stringValue": "STV"
-          },
-          {
-            "name": "length",
-            "dataType": 3,
-            "numberValue": 672000
-          },
-          {
-            "name": "weight",
-            "dataType": 3,
-            "numberValue": 7826000
-          },
-          {
-            "name": "location",
-            "dataType": 7,
-            "locationValue": {
-              "latitude": 46786299,
-              "longitude": -92051336
-            }
+            "stringValue": "XYZ"
           }
       ],
       "ownerIndex": 1
     },
 
     {
-      "recordId": "1-4m-n0t-f1sh",
-      "recordType": "fish",
+      "recordId": "1-4m-n0t-cert",
+      "recordType": "certificate",
       "properties": [
           {
-            "name": "species",
+            "name": "cert_type",
             "dataType": 4,
-            "stringValue": "SPW"
+            "stringValue": "ABC"
           },
-          {
-            "name": "length",
-            "dataType": 3,
-            "numberValue": 20567000
-          },
-          {
-            "name": "weight",
-            "dataType": 3,
-            "numberValue": 57243980000
-          },
-          {
-            "name": "location",
-            "dataType": 7,
-            "locationValue": {
-              "latitude": -31404863,
-              "longitude": 40018772
-            }
-          }
       ],
       "ownerIndex": 0
     }

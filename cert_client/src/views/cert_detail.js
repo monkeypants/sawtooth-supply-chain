@@ -35,12 +35,14 @@ const {
 /**
  * Possible selection options
  */
-const authorizableProperties = [
-  ['location', 'Location'],
-  ['temperature', 'Temperature'],
-  ['tilt', 'Tilt'],
-  ['shock', 'Shock']
-]
+/*const authorizableProperties = [
+ * ['location', 'Location'],
+ * ['temperature', 'Temperature'],
+ * ['tilt', 'Tilt'],
+ * ['shock', 'Shock']
+ *]
+ */
+const authorizableProperties = []
 
 const _labelProperty = (label, value) => [
   m('dl',
@@ -552,59 +554,7 @@ const CertDetail = {
             onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
           })),
 
-        _row(_labelProperty('Species', getPropertyValue(record, 'species'))),
-
-        _row(
-          _labelProperty('Length (m)', parsing.toFloat(getPropertyValue(record, 'length', 0))),
-          _labelProperty('Weight (kg)', parsing.toFloat(getPropertyValue(record, 'weight', 0)))),
-
-        _row(
-          _labelProperty(
-            'Location',
-            _propLink(record, 'location', _formatLocation(getPropertyValue(record, 'location')))
-          ),
-          (isReporter(record, 'location', publicKey) && !record.final
-           ? m(ReportLocation, { record, onsuccess: () => _loadData(record.recordId, vnode.state) })
-           : null)),
-
-        _row(
-          _labelProperty(
-            'Temperature',
-            _propLink(record, 'temperature', _formatTemp(getPropertyValue(record, 'temperature')))),
-          (isReporter(record, 'temperature', publicKey) && !record.final
-          ? m(ReportValue,
-            {
-              name: 'temperature',
-              label: 'Temperature (C°)',
-              record,
-              typeField: 'numberValue',
-              type: payloads.updateProperties.enum.NUMBER,
-              xform: (x) => parsing.toInt(x),
-              onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
-            })
-           : null)),
-
-        _row(
-          _labelProperty(
-            'Tilt',
-            _propLink(record, 'tilt', _formatValue(record, 'tilt'))),
-          (isReporter(record, 'tilt', publicKey) && !record.final
-           ? m(ReportTilt, {
-             record,
-             onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
-           })
-           : null)),
-
-        _row(
-          _labelProperty(
-            'Shock',
-            _propLink(record, 'shock', _formatValue(record, 'shock'))),
-          (isReporter(record, 'shock', publicKey) && !record.final
-           ? m(ReportShock, {
-             record,
-             onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
-           })
-           : null)),
+        _row(_labelProperty('Certificate Type', getPropertyValue(record, 'cert_type'))),
 
         _row(m(ReporterControl, {
           record,

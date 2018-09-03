@@ -34,36 +34,36 @@ const withIntVal = fn => m.withAttr('value', v => fn(parsing.toInt(v)))
 const typedWidget = state => {
   const property = _.get(state, 'property', {})
 
-  if (property.dataType === 'LOCATION') {
-    return m(MapWidget, {
-      coordinates: property.updates.map(update => update.value)
-    })
-  }
-
+  /* if (property.dataType === 'LOCATION') {
+   * return m(MapWidget, {
+   *   coordinates: property.updates.map(update => update.value)
+   * })
+   *}
+   */
   if (property.dataType === 'NUMBER') {
     return m(LineGraphWidget, { updates: property.updates })
   }
-
-  if (property.name === 'tilt') {
-    return m(LineGraphWidget, {
-      updates: property.updates.map(update => {
-        const amplitude = Math.sqrt(update.value.x ** 2 + update.value.y ** 2)
-        return _.assign({}, update, {value: amplitude.toFixed(3)})
-      })
-    })
-  }
-
-  if (property.name === 'shock') {
-    return m(LineGraphWidget, {
-      updates: property.updates.map(update => {
-        const degree = update.value.duration === 0
-          ? 0
-          : update.value.accel / update.value.duration
-        return _.assign({}, update, {value: degree.toFixed(3)})
-      })
-    })
-  }
-
+  /*
+   *if (property.name === 'tilt') {
+   * return m(LineGraphWidget, {
+   *   updates: property.updates.map(update => {
+   *     const amplitude = Math.sqrt(update.value.x ** 2 + update.value.y ** 2)
+   *     return _.assign({}, update, {value: amplitude.toFixed(3)})
+   *   })
+   * })
+   *}
+   *
+   *if (property.name === 'shock') {
+   * return m(LineGraphWidget, {
+   *   updates: property.updates.map(update => {
+   *     const degree = update.value.duration === 0
+   *       ? 0
+   *       : update.value.accel / update.value.duration
+   *     return _.assign({}, update, {value: degree.toFixed(3)})
+   *   })
+   * })
+   *}
+   */
   return null
 }
 
@@ -105,7 +105,7 @@ const updateSubmitter = state => e => {
 // Produces custom input fields for location, tilt, and shock
 const typedInput = state => {
   const { dataType, name } = state.property
-
+  /*
   if (dataType === 'LOCATION') {
     return [
       m('.col.md-4.mr-1',
@@ -159,7 +159,7 @@ const typedInput = state => {
       })
     ])
   }
-
+  */
   return null
 }
 

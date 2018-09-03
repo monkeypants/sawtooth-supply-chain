@@ -27,12 +27,15 @@ const layout = require('../components/layout')
 /**
  * Possible selection options
  */
-const authorizableProperties = [
-  ['location', 'Location'],
-  ['temperature', 'Temperature'],
-  ['tilt', 'Tilt'],
-  ['shock', 'Shock']
-]
+/*const authorizableProperties = [
+ * ['location', 'Location'],
+ * ['temperature', 'Temperature'],
+ * ['tilt', 'Tilt'],
+ * ['shock', 'Shock']
+ *]
+ */
+const authorizableProperties = []
+
 
 /**
  * The Form for tracking a new certificate.
@@ -190,27 +193,9 @@ const _handleSubmit = (signingKey, state) => {
     recordType: 'certificate',
     properties: [
       {
-        name: 'species',
-        stringValue: state.species,
+        name: 'cert_type',
+          stringValue: state.cert_type,
         dataType: payloads.createRecord.enum.STRING
-      },
-      {
-        name: 'length',
-        numberValue: parsing.toInt(state.lengthInCM),
-        dataType: payloads.createRecord.enum.NUMBER
-      },
-      {
-        name: 'weight',
-        numberValue: parsing.toInt(state.weightInKg),
-        dataType: payloads.createRecord.enum.NUMBER
-      },
-      {
-        name: 'location',
-        locationValue: {
-          latitude: parsing.toInt(state.latitude),
-          longitude: parsing.toInt(state.longitude)
-        },
-        dataType: payloads.createRecord.enum.LOCATION
       }
     ]
   })

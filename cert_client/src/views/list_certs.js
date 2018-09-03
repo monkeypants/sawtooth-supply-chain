@@ -33,7 +33,7 @@ const CertList = {
     vnode.state.currentPage = 0
 
     const refresh = () => {
-      api.get('records?recordType=cert').then((records) => {
+      api.get('records?recordType=certificate').then((records) => {
         vnode.state.records = records
         vnode.state.records.sort((a, b) => {
           return getLatestPropertyUpdateTime(b) - getLatestPropertyUpdateTime(a)
@@ -58,7 +58,7 @@ const CertList = {
         m(Table, {
           headers: [
             'Serial Number',
-            'Species',
+            'Certificate Type',
             'Added',
             'Updated',
             'Updates'
@@ -70,7 +70,7 @@ const CertList = {
                   m(`a[href=/certs/${rec.recordId}]`, {
                     oncreate: m.route.link
                   }, truncate(rec.recordId, { length: 32 })),
-                  getPropertyValue(rec, 'species'),
+                  getPropertyValue(rec, 'cert_type'),
                   // This is the "created" time, synthesized from properties
                   // added on the initial create
                   formatTimestamp(getOldestPropertyUpdateTime(rec)),

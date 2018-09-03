@@ -50,7 +50,7 @@ services:
           npm run make-asset &&
           npm run make-certs &&
           npm run seed-sample-assets &&
-          npm run seed-sample-cert &&
+          npm run seed-sample-certs &&
           cd -
         fi;
         tail -f /dev/null

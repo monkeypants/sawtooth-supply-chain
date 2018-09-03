@@ -72,12 +72,96 @@ const AddCertForm = {
                }),
                value: vnode.state.serialNumber
              })),
-             _formGroup('Certificate Type (3-letter code)', m('input.form-control', {
+             _formGroup('Certificate Type (e.g. Certificate of Origin)', m('input.form-control', {
                type: 'text',
                oninput: m.withAttr('value', (value) => {
                  vnode.state.cert_type = value
                }),
                value: vnode.state.cert_type
+             })),
+               _formGroup('Certificate SubType (e.g. ChAFTA)', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.cert_sub_type = value
+               }),
+               value: vnode.state.cert_sub_type
+             })),
+              _formGroup('Harmonized Tariff Code', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.tariff_code = value
+               }),
+               value: vnode.state.tariff_code
+             })),
+              _formGroup('Certificate Number', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.certificate_number = value
+               }),
+               value: vnode.state.certificate_number
+             })),
+              _formGroup('Producer', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.producer = value
+               }),
+               value: vnode.state.producer
+             })),
+              _formGroup('Exporter', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.exporter = value
+               }),
+               value: vnode.state.exporter
+             })),
+              _formGroup('Importer', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.importer = value
+               }),
+               value: vnode.state.importer
+             })),
+              _formGroup('Port of Loading', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.port_of_loading = value
+               }),
+                value: vnode.state.port_of_loading
+             })),
+              _formGroup('Vessel/Aircraft', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.vessel_aircraft = value
+               }),
+               value: vnode.state.vessel_aircraft
+             })),
+              _formGroup('Date of Departure', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.date_of_departure = value
+               }),
+               value: vnode.state.date_of_departure
+             })),
+              _formGroup('Port of Discharge', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.port_of_discharge = value
+               }),
+               value: vnode.state.port_of_discharge
+             })),
+              _formGroup('Final Destination', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.final_destination = value
+               }),
+               value: vnode.state.final_destination
+             })),
+              _formGroup('Document ID', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.document_id = value
+               }),
+               value: vnode.state.document_id
              })),
 
              /*layout.row([
@@ -194,9 +278,69 @@ const _handleSubmit = (signingKey, state) => {
     properties: [
       {
         name: 'cert_type',
-          stringValue: state.cert_type,
+        stringValue: state.cert_type,
         dataType: payloads.createRecord.enum.STRING
-      }
+      },
+      {
+        name: 'cert_sub_type',
+        stringValue: state.cert_sub_type,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'tariff_code',
+        stringValue: state.tariff_code,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'certificate_number',
+        stringValue: state.certificate_number,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'producer',
+        stringValue: state.producer,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'exporter',
+        stringValue: state.exporter,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'importer',
+        stringValue: state.importer,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'port_of_loading',
+        stringValue: state.port_of_loading,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'vessel_aircraft',
+        stringValue: state.vessel_aircraft,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'date_of_departure',
+        stringValue: state.date_of_departure,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'port_of_discharge',
+        stringValue: state.port_of_discharge,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'final_destination',
+        stringValue: state.final_destination,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'document_id',
+        stringValue: state.document_id,
+        dataType: payloads.createRecord.enum.STRING
+      },
     ]
   })
 

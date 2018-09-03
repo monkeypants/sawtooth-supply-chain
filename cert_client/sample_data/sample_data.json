@@ -8,6 +8,21 @@
             "name": "cert_type",
             "dataType": 4,
             "stringValue": "ABC"
+          },
+          {
+            "name": "cert_sub_type",
+            "dataType": 4,
+            "stringValue": "DEF"
+          },
+          {
+            "name": "certificate_number",
+            "dataType": 4,
+            "stringValue": "T123-ABC"
+          },
+          {
+            "name": "document_id",
+            "dataType": 4,
+            "stringValue": "DOCU123"
           }
       ],
       "ownerIndex": 0,
@@ -23,6 +38,21 @@
             "name": "cert_type",
             "dataType": 4,
             "stringValue": "XYZ"
+          },
+          {
+            "name": "cert_sub_type",
+            "dataType": 4,
+            "stringValue": "123"
+          },
+          {
+            "name": "certificate_number",
+            "dataType": 4,
+            "stringValue": "T123-ABC"
+          },
+          {
+            "name": "document_id",
+            "dataType": 4,
+            "stringValue": "DOCU123"
           }
       ],
       "ownerIndex": 1
@@ -35,6 +65,21 @@
             "name": "cert_type",
             "dataType": 4,
             "stringValue": "ABC"
+          },
+          {
+            "name": "cert_sub_type",
+            "dataType": 4,
+            "stringValue": "DEF"
+          },
+          {
+            "name": "certificate_number",
+            "dataType": 4,
+            "stringValue": "T123-ABC"
+          },
+          {
+            "name": "document_id",
+            "dataType": 4,
+            "stringValue": "DOCU123"
           }
       ],
       "ownerIndex": 0

@@ -6,6 +6,66 @@
           "name": "cert_type",
           "dataType": 4,
           "required": true
+        },
+        {
+          "name": "cert_sub_type",
+          "dataType": 4,
+          "required": true
+        },
+        {
+          "name": "tariff_code",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "certificate_number",
+          "dataType": 4,
+          "required": true
+        },
+        {
+          "name": "producer",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "exporter",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "importer",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "port_of_loading",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "vessel_aircraft",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "date_of_departure",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "port_of_discharge",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "final_destination",
+          "dataType": 4,
+          "required": false
+        },
+        {
+          "name": "document_id",
+          "dataType": 4,
+          "required": true
         }
     ]
   }

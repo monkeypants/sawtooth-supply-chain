@@ -554,7 +554,19 @@ const CertDetail = {
             onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
           })),
 
-        _row(_labelProperty('Certificate Type', getPropertyValue(record, 'cert_type'))),
+        _row(_labelProperty('Certificate Type (e.g. Ceritificate of Origin)', getPropertyValue(record, 'cert_type'))),
+        _row(_labelProperty('Certificate SubType (e.g. ChAFTA)', getPropertyValue(record, 'cert_sub_type'))),
+        _row(_labelProperty('Harmonized Tariff Code', getPropertyValue(record, 'tariff_code'))),
+        _row(_labelProperty('Certificate Number', getPropertyValue(record, 'certificate_number'))),
+        _row(_labelProperty('Producer', getPropertyValue(record, 'producer'))),
+        _row(_labelProperty('Exporter', getPropertyValue(record, 'exporter'))),
+        _row(_labelProperty('Importer', getPropertyValue(record, 'importer'))),
+        _row(_labelProperty('Port of Loading', getPropertyValue(record, 'port_of_loading'))),
+        _row(_labelProperty('Vessel/Aircraft', getPropertyValue(record, 'vessel_aircraft'))),
+        _row(_labelProperty('Date of Departure', getPropertyValue(record, 'date_of_departure'))),
+        _row(_labelProperty('Port of Discharge', getPropertyValue(record, 'port_of_discharge'))),
+        _row(_labelProperty('Final Destination', getPropertyValue(record, 'final_destination'))),
+        _row(_labelProperty('Document ID', getPropertyValue(record, 'document_id'))),
 
         _row(m(ReporterControl, {
           record,

@@ -48,7 +48,7 @@ services:
           cd server/ &&
           npm run init &&
           npm run make-asset &&
-          npm run make-cert &&
+          npm run make-certs &&
           npm run seed-sample-assets &&
           npm run seed-sample-cert &&
           cd -

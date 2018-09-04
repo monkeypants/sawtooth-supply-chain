@@ -66,6 +66,11 @@
           "name": "document_id",
           "dataType": 4,
           "required": true
+        },
+        {
+          "name": "cross_reference",
+          "dataType": 4,
+          "required": false
         }
     ]
   }

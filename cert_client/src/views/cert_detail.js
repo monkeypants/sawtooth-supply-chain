@@ -260,116 +260,208 @@ const _propLink = (record, propName, content) =>
     { oncreate: m.route.link },
     content)
 
-const ReportLocation = {
+// const ReportLocation = {
+//   view: (vnode) => {
+//     let onsuccess = vnode.attrs.onsuccess || (() => null)
+//     return [
+//       m('form', {
+//         onsubmit: (e) => {
+//           e.preventDefault()
+//           _updateProperty(vnode.attrs.record, {
+//             name: 'location',
+//             locationValue: {
+//               latitude: parsing.toInt(vnode.state.latitude),
+//               longitude: parsing.toInt(vnode.state.longitude)
+//             },
+//             dataType: payloads.updateProperties.enum.LOCATION
+//           }).then(() => {
+//             vnode.state.latitude = ''
+//             vnode.state.longitude = ''
+//           })
+//           .then(onsuccess)
+//         }
+//       },
+//       m('.form-row',
+//         m('.form-group.col-5',
+//           m('label.sr-only', { 'for': 'latitude' }, 'Latitude'),
+//           m("input.form-control[type='text']", {
+//             name: 'latitude',
+//             type: 'number',
+//             step: 'any',
+//             min: -90,
+//             max: 90,
+//             onchange: m.withAttr('value', (value) => {
+//               vnode.state.latitude = value
+//             }),
+//             value: vnode.state.latitude,
+//             placeholder: 'Latitude'
+//           })),
+//         m('.form-group.col-5',
+//           m('label.sr-only', { 'for': 'longitude' }, 'Longitude'),
+//           m("input.form-control[type='text']", {
+//             name: 'longitude',
+//             type: 'number',
+//             step: 'any',
+//             min: -180,
+//             max: 180,
+//             onchange: m.withAttr('value', (value) => {
+//               vnode.state.longitude = value
+//             }),
+//             value: vnode.state.longitude,
+//             placeholder: 'Longitude'
+//           })),
+
+//         m('.col-2',
+//           m('button.btn.btn-primary', 'Update'))))
+//     ]
+//   }
+// }
+
+// const ReportValue = {
+//   view: (vnode) => {
+//     let onsuccess = vnode.attrs.onsuccess || (() => null)
+//     let xform = vnode.attrs.xform || ((x) => x)
+//     return [
+//       m('form', {
+//         onsubmit: (e) => {
+//           e.preventDefault()
+//           _updateProperty(vnode.attrs.record, {
+//             name: vnode.attrs.name,
+//             [vnode.attrs.typeField]: xform(vnode.state.value),
+//             dataType: vnode.attrs.type
+//           }).then(() => {
+//             vnode.state.value = ''
+//           })
+//           .then(onsuccess)
+//         }
+//       },
+//         m('.form-row',
+//           m('.form-group.col-10',
+//             m('label.sr-only', { 'for': vnode.attrs.name }, vnode.attrs.label),
+//             m("input.form-control[type='text']", {
+//               name: vnode.attrs.name,
+//               onchange: m.withAttr('value', (value) => {
+//                 vnode.state.value = value
+//               }),
+//               value: vnode.state.value,
+//               placeholder: vnode.attrs.label
+//             })),
+//          m('.col-2',
+//            m('button.btn.btn-primary', 'Update'))))
+//     ]
+//   }
+// }
+
+// const ReportTilt = {
+//   view: (vnode) => {
+//     let onsuccess = vnode.attrs.onsuccess || (() => null)
+//     return [
+//       m('form', {
+//         onsubmit: (e) => {
+//           e.preventDefault()
+//           _updateProperty(vnode.attrs.record, {
+//             name: 'tilt',
+//             stringValue: JSON.stringify({
+//               x: parsing.toInt(vnode.state.x),
+//               y: parsing.toInt(vnode.state.y)
+//             }),
+//             dataType: payloads.updateProperties.enum.STRING
+//           })
+//           .then(() => {
+//             vnode.state.x = null
+//             vnode.state.y = null
+//           })
+//           .then(onsuccess)
+//         }
+//       },
+//       m('.form-row',
+//         m('.col.md-4.mr-1',
+//           m('input.form-control', {
+//             placeholder: 'Enter X...',
+//             type: 'number',
+//             step: 'any',
+//             oninput: m.withAttr('value', (value) => {
+//               vnode.state.x = value
+//             })
+//           })),
+//         m('.col.md-4',
+//           m('input.form-control', {
+//             placeholder: 'Enter Y...',
+//             type: 'number',
+//             step: 'any',
+//             oninput: m.withAttr('value', (value) => {
+//               vnode.state.y = value
+//             })
+//           })),
+//         m('.col-2',
+//           m('button.btn.btn-primary', 'Update'))))
+//     ]
+//   }
+// }
+
+// const ReportShock = {
+//   view: (vnode) => {
+//     let onsuccess = vnode.attrs.onsuccess || (() => null)
+//     return [
+//       m('form', {
+//         onsubmit: (e) => {
+//           e.preventDefault()
+//           _updateProperty(vnode.attrs.record, {
+//             name: 'shock',
+//             stringValue: JSON.stringify({
+//               accel: parsing.toInt(vnode.state.accel),
+//               duration: parsing.toInt(vnode.state.duration)
+//             }),
+//             dataType: payloads.updateProperties.enum.STRING
+//           })
+//           .then(() => {
+//             vnode.state.accel = null
+//             vnode.state.duration = null
+//           })
+//           .then(onsuccess)
+//         }
+//       },
+//       m('.form-row',
+//         m('.col.md-4.mr-1',
+//           m('input.form-control', {
+//             placeholder: 'Enter Acceleration...',
+//             type: 'number',
+//             step: 'any',
+//             min: 0,
+//             oninput: m.withAttr('value', (value) => {
+//               vnode.state.accel = value
+//             })
+//           })),
+//         m('.col.md-4',
+//           m('input.form-control', {
+//             placeholder: 'Enter Duration...',
+//             type: 'number',
+//             step: 'any',
+//             min: 0,
+//             oninput: m.withAttr('value', (value) => {
+//               vnode.state.duration = value
+//             })
+//           })),
+//         m('.col-2',
+//           m('button.btn.btn-primary', 'Update'))))
+//     ]
+//   }
+// }
+
+const ReportCrossReference = {
   view: (vnode) => {
-    let onsuccess = vnode.attrs.onsuccess || (() => null)
+    let onsuccess = vnode.attrs.onsuccess || (() => null);
     return [
       m('form', {
         onsubmit: (e) => {
-          e.preventDefault()
+          e.preventDefault();
           _updateProperty(vnode.attrs.record, {
-            name: 'location',
-            locationValue: {
-              latitude: parsing.toInt(vnode.state.latitude),
-              longitude: parsing.toInt(vnode.state.longitude)
-            },
-            dataType: payloads.updateProperties.enum.LOCATION
-          }).then(() => {
-            vnode.state.latitude = ''
-            vnode.state.longitude = ''
-          })
-          .then(onsuccess)
-        }
-      },
-      m('.form-row',
-        m('.form-group.col-5',
-          m('label.sr-only', { 'for': 'latitude' }, 'Latitude'),
-          m("input.form-control[type='text']", {
-            name: 'latitude',
-            type: 'number',
-            step: 'any',
-            min: -90,
-            max: 90,
-            onchange: m.withAttr('value', (value) => {
-              vnode.state.latitude = value
-            }),
-            value: vnode.state.latitude,
-            placeholder: 'Latitude'
-          })),
-        m('.form-group.col-5',
-          m('label.sr-only', { 'for': 'longitude' }, 'Longitude'),
-          m("input.form-control[type='text']", {
-            name: 'longitude',
-            type: 'number',
-            step: 'any',
-            min: -180,
-            max: 180,
-            onchange: m.withAttr('value', (value) => {
-              vnode.state.longitude = value
-            }),
-            value: vnode.state.longitude,
-            placeholder: 'Longitude'
-          })),
-
-        m('.col-2',
-          m('button.btn.btn-primary', 'Update'))))
-    ]
-  }
-}
-
-const ReportValue = {
-  view: (vnode) => {
-    let onsuccess = vnode.attrs.onsuccess || (() => null)
-    let xform = vnode.attrs.xform || ((x) => x)
-    return [
-      m('form', {
-        onsubmit: (e) => {
-          e.preventDefault()
-          _updateProperty(vnode.attrs.record, {
-            name: vnode.attrs.name,
-            [vnode.attrs.typeField]: xform(vnode.state.value),
-            dataType: vnode.attrs.type
-          }).then(() => {
-            vnode.state.value = ''
-          })
-          .then(onsuccess)
-        }
-      },
-        m('.form-row',
-          m('.form-group.col-10',
-            m('label.sr-only', { 'for': vnode.attrs.name }, vnode.attrs.label),
-            m("input.form-control[type='text']", {
-              name: vnode.attrs.name,
-              onchange: m.withAttr('value', (value) => {
-                vnode.state.value = value
-              }),
-              value: vnode.state.value,
-              placeholder: vnode.attrs.label
-            })),
-         m('.col-2',
-           m('button.btn.btn-primary', 'Update'))))
-    ]
-  }
-}
-
-const ReportTilt = {
-  view: (vnode) => {
-    let onsuccess = vnode.attrs.onsuccess || (() => null)
-    return [
-      m('form', {
-        onsubmit: (e) => {
-          e.preventDefault()
-          _updateProperty(vnode.attrs.record, {
-            name: 'tilt',
-            stringValue: JSON.stringify({
-              x: parsing.toInt(vnode.state.x),
-              y: parsing.toInt(vnode.state.y)
-            }),
+            name: 'cross_reference',
+            stringValue: vnode.state.cross_reference,
             dataType: payloads.updateProperties.enum.STRING
           })
           .then(() => {
-            vnode.state.x = null
-            vnode.state.y = null
+            vnode.state.cross_reference = null;
           })
           .then(onsuccess)
         }
@@ -377,76 +469,21 @@ const ReportTilt = {
       m('.form-row',
         m('.col.md-4.mr-1',
           m('input.form-control', {
-            placeholder: 'Enter X...',
-            type: 'number',
-            step: 'any',
-            oninput: m.withAttr('value', (value) => {
-              vnode.state.x = value
-            })
-          })),
-        m('.col.md-4',
-          m('input.form-control', {
-            placeholder: 'Enter Y...',
-            type: 'number',
-            step: 'any',
-            oninput: m.withAttr('value', (value) => {
-              vnode.state.y = value
-            })
-          })),
-        m('.col-2',
-          m('button.btn.btn-primary', 'Update'))))
-    ]
-  }
-}
-
-const ReportShock = {
-  view: (vnode) => {
-    let onsuccess = vnode.attrs.onsuccess || (() => null)
-    return [
-      m('form', {
-        onsubmit: (e) => {
-          e.preventDefault()
-          _updateProperty(vnode.attrs.record, {
-            name: 'shock',
-            stringValue: JSON.stringify({
-              accel: parsing.toInt(vnode.state.accel),
-              duration: parsing.toInt(vnode.state.duration)
+            placeholder: 'Add a cross reference',
+            type: 'string',
+            oninput:  m.withAttr('value', (value) => {
+              vnode.state.cross_reference = value;
             }),
-            dataType: payloads.updateProperties.enum.STRING
+            value: vnode.state.cross_reference
           })
-          .then(() => {
-            vnode.state.accel = null
-            vnode.state.duration = null
-          })
-          .then(onsuccess)
-        }
-      },
-      m('.form-row',
-        m('.col.md-4.mr-1',
-          m('input.form-control', {
-            placeholder: 'Enter Acceleration...',
-            type: 'number',
-            step: 'any',
-            min: 0,
-            oninput: m.withAttr('value', (value) => {
-              vnode.state.accel = value
-            })
-          })),
-        m('.col.md-4',
-          m('input.form-control', {
-            placeholder: 'Enter Duration...',
-            type: 'number',
-            step: 'any',
-            min: 0,
-            oninput: m.withAttr('value', (value) => {
-              vnode.state.duration = value
-            })
-          })),
+        ),
         m('.col-2',
-          m('button.btn.btn-primary', 'Update'))))
-    ]
-  }
-}
+          m('button.btn.btn-primary', 'Update')
+        )
+      ))
+    ];
+  },
+};
 
 const AuthorizeReporter = {
   oninit (vnode) {
@@ -553,6 +590,44 @@ const CertDetail = {
             label: 'Custodianship',
             onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
           })),
+// -        _row(
+// -          _labelProperty(
+// -            'Temperature',
+// -            _propLink(record, 'temperature', _formatTemp(getPropertyValue(record, 'temperature')))),
+// -          (isReporter(record, 'temperature', publicKey) && !record.final
+// -          ? m(ReportValue,
+// -            {
+// -              name: 'temperature',
+// -              label: 'Temperature (C°)',
+// -              record,
+// -              typeField: 'numberValue',
+// -              type: payloads.updateProperties.enum.NUMBER,
+// -              xform: (x) => parsing.toInt(x),
+// -              onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
+// -            })
+// -           : null)),
+// -
+// -        _row(
+// -          _labelProperty(
+// -            'Tilt',
+// -            _propLink(record, 'tilt', _formatValue(record, 'tilt'))),
+// -          (isReporter(record, 'tilt', publicKey) && !record.final
+// -           ? m(ReportTilt, {
+// -             record,
+// -             onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
+// -           })
+// -           : null)),
+// -
+// -        _row(
+// -          _labelProperty(
+// -            'Shock',
+// -            _propLink(record, 'shock', _formatValue(record, 'shock'))),
+// -          (isReporter(record, 'shock', publicKey) && !record.final
+// -           ? m(ReportShock, {
+// -             record,
+// -             onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
+// -           })
+// -           : null)),
 
         _row(_labelProperty('Certificate Type (e.g. Ceritificate of Origin)', getPropertyValue(record, 'cert_type'))),
         _row(_labelProperty('Certificate SubType (e.g. ChAFTA)', getPropertyValue(record, 'cert_sub_type'))),
@@ -568,6 +643,18 @@ const CertDetail = {
         _row(_labelProperty('Final Destination', getPropertyValue(record, 'final_destination'))),
         _row(_labelProperty('Document ID', getPropertyValue(record, 'document_id'))),
 
+        _row(
+          _labelProperty(
+            'Cross Reference',
+            _propLink(record, 'cross_reference', getPropertyValue(record, 'cross_reference'))),
+          (isReporter(record, 'cross_reference', publicKey) && !record.final
+            ? m(ReportCrossReference, {
+              record,
+              onsuccess: () => _loadData(vnode.attrs.recordId, vnode.state)
+            })
+            : null
+          )
+        ),
         _row(m(ReporterControl, {
           record,
           publicKey,

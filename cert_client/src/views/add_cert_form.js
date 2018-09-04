@@ -72,34 +72,39 @@ const AddCertForm = {
                }),
                value: vnode.state.serialNumber
              })),
-             _formGroup('Certificate Type (e.g. Certificate of Origin)', m('input.form-control', {
-               type: 'text',
-               oninput: m.withAttr('value', (value) => {
-                 vnode.state.cert_type = value
-               }),
-               value: vnode.state.cert_type
-             })),
-               _formGroup('Certificate SubType (e.g. ChAFTA)', m('input.form-control', {
-               type: 'text',
-               oninput: m.withAttr('value', (value) => {
-                 vnode.state.cert_sub_type = value
-               }),
-               value: vnode.state.cert_sub_type
-             })),
+             layout.row([
+               _formGroup('Certificate Type (e.g. Certificate of Origin)', m('input.form-control', {
+                 type: 'text',
+                 oninput: m.withAttr('value', (value) => {
+                   vnode.state.cert_type = value
+                 }),
+                 value: vnode.state.cert_type
+               })),
+                  _formGroup('Certificate SubType (e.g. ChAFTA)', m('input.form-control', {
+                  type: 'text',
+                  oninput: m.withAttr('value', (value) => {
+                    vnode.state.cert_sub_type = value
+                  }),
+                  value: vnode.state.cert_sub_type
+                })),
+            ]),
+            layout.row([
               _formGroup('Harmonized Tariff Code', m('input.form-control', {
-               type: 'text',
-               oninput: m.withAttr('value', (value) => {
-                 vnode.state.tariff_code = value
-               }),
-               value: vnode.state.tariff_code
-             })),
+                type: 'text',
+                oninput: m.withAttr('value', (value) => {
+                  vnode.state.tariff_code = value
+                }),
+                value: vnode.state.tariff_code
+              })),
               _formGroup('Certificate Number', m('input.form-control', {
-               type: 'text',
-               oninput: m.withAttr('value', (value) => {
-                 vnode.state.certificate_number = value
-               }),
-               value: vnode.state.certificate_number
-             })),
+                type: 'text',
+                oninput: m.withAttr('value', (value) => {
+                  vnode.state.certificate_number = value
+                }),
+                value: vnode.state.certificate_number
+              })),
+            ]),
+            layout.row([
               _formGroup('Producer', m('input.form-control', {
                type: 'text',
                oninput: m.withAttr('value', (value) => {
@@ -121,6 +126,8 @@ const AddCertForm = {
                }),
                value: vnode.state.importer
              })),
+            ]),
+            layout.row([
               _formGroup('Port of Loading', m('input.form-control', {
                type: 'text',
                oninput: m.withAttr('value', (value) => {
@@ -156,6 +163,8 @@ const AddCertForm = {
                }),
                value: vnode.state.final_destination
              })),
+            ]),
+            layout.row([
               _formGroup('Document ID', m('input.form-control', {
                type: 'text',
                oninput: m.withAttr('value', (value) => {
@@ -163,6 +172,14 @@ const AddCertForm = {
                }),
                value: vnode.state.document_id
              })),
+              _formGroup('Cross Reference', m('input.form-control', {
+               type: 'text',
+               oninput: m.withAttr('value', (value) => {
+                 vnode.state.cross_reference = value
+               }),
+               value: vnode.state.cross_reference
+             })),
+            ]),
 
              /*layout.row([
               *  _formGroup('Length (m)', m('input.form-control', {
@@ -339,6 +356,11 @@ const _handleSubmit = (signingKey, state) => {
       {
         name: 'document_id',
         stringValue: state.document_id,
+        dataType: payloads.createRecord.enum.STRING
+      },
+      {
+        name: 'cross_reference',
+        stringValue: state.cross_reference,
         dataType: payloads.createRecord.enum.STRING
       },
     ]

@@ -136,6 +136,106 @@
       "publicKey": "025911cb45683cbd33b8884e811e1aed92d943f6989a2fa4c540876e437c2c9ff6",
       "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
       "password": "psx"
+    },
+    {
+      "username": "aigroup",
+      "name": "Ai Group",
+      "email": "noreply@aigroup.com.au",
+      "privateKey": "177355336b7f347523c7c779d0b4a1cafe2c5808d9439a890d9d2ccab244b375",
+      "encryptedKey": "{\"iv\":\"p2QYqqn9+eFU8EW1Q2o6ZA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"OvLqmibKi2WsemSJj3Tz4kXMR5B9WywXPaz3u4Wb7rRvqraLNbN/jm7z0kip9EBloC9svPb94iaa4vK8OcNgEx0+T7doI4wm\"}",
+      "publicKey": "02a8889bf710ba75d2952e41c20fb8e64835862fbb8269b8a96854199cb7bef03a",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "victorianchamber",
+      "name": "Victorian Chamber of Commerce",
+      "email": "noreply@victorianchamber.com.au",
+      "privateKey": "8c2b9998ff38b6f20defe1d42e812a2990b1b6fa5a2c9d2943a24dcdf4a7ef72",
+      "encryptedKey": "{\"iv\":\"HY4CF6cp+UE8cqOYPNj3Sg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"qZ30cCZEmeSRWkltn47uQze2Io/CPHA6/UfTp3jv5qrYwt+qSH3enQ71CrdS43whvI+2Ui6CNjnFiqcFB5dOTYAN0pm3MlWY\"}",
+      "publicKey": "0291911d962407dc5bca71f384f7cec4315801a3a3fe722d436e71f933d380186f",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "nswbusinesschamber",
+      "name": "NSW Business Chamber",
+      "email": "noreply@nswbusinesschamber.com.au",
+      "privateKey": "d89f6d50863fbe4897c19f569fd23f41276924f0af5e457834f0350bcdea3253",
+      "encryptedKey": "{\"iv\":\"1waylulCgn1mzvhL0BLjFg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"AuzCr58dNJ54fJUd9yW21xKahpC8CnDVZvA+dWAx8ui5WkAxDDAFd6zgFDUfTOejjzqQv684xE3eBVhnpvvw8KHuuGAZk8iG\"}",
+      "publicKey": "02f59e2c4bc39c050d6052e9a750173432a94145dce7a0ca60a3fc5a05f29081a8",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "business-sa",
+      "name": "Business SA",
+      "email": "noreply@business-sa.com.au",
+      "privateKey": "6b0f41e4aaf1b467389766ebe87df844cc363e22bc922d8b438990692e9766b8",
+      "encryptedKey": "{\"iv\":\"pJ+9pF4t4IKXdlkr7/PaqA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"pgoM4N++htDBAf8CAEJFsyOhcJC4CtH/WsFp+WAkPQ2RvE00ADuo18yk0Y3mLzTEUoa4/Ee6b4hCCu2956QBDDKJV9KpsC2j\"}",
+      "publicKey": "02b9eda8c3c2ab4177151e973fab989af929e2442e95c1c765632d2e87de1210ef",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "cciq",
+      "name": "Chambe of Commerce & Industry Queensland",
+      "email": "noreply@cciq.com.au",
+      "privateKey": "0c7546dfadf5d9a97d629e54ffbc636063e9d1a86b8bfc9eeb4a6e5998d37462",
+      "encryptedKey": "{\"iv\":\"plerm2BB34S8SXimCFD3BA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"9r9SU5SkVvuhCqYBx+RUGWMeZDkPFF2Rx2uxpz2ux9V6h8Och0nRdbGj+ZbuzDvSoKDSzshaCKOXJWPo6GAgi4PHx/mBR41M\"}",
+      "publicKey": "031d653bea87e27ffb364a6ce437e1b9ec1867e8112b0d2776c284e0d7a226abbc",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "actchamber",
+      "name": "ACT & Region Chamber of Commerce & Industry",
+      "email": "noreply@actchamber.com.au",
+      "privateKey": "c5d4aa3d0b54d0b520967ed37b609a9bc06e2ffaba8fb4fa0d4fd39abcddd38b",
+      "encryptedKey": "{\"iv\":\"BLUjWeKzW2E43UAzwTEEAA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"VtehExu7rCjDvvyG6yQcgP9buKM+fmdiHI7dc3jpZCuakxEajl2oOI2uu+gUxNDGaN+0wlonW041Mr+riVduOak3V9HsVKFc\"}",
+      "publicKey": "02f0dc2827422b240b38aba9fb4c17515d00381a6f4a5d971cdb0138abe80b770a",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "cciwa",
+      "name": "Chamber of Commerce & Industry Western Australia",
+      "email": "noreply@cciwa.com.au",
+      "privateKey": "c3d158932326cf3aeb22da28806152faee3cf97818765bed532e427e7cef3c04",
+      "encryptedKey": "{\"iv\":\"UbrY7uvyF87g0+xd/fBeyA==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"kLGmUecvn4YkDY+hxkjxMa9NSMPlh1D34z2wvV2jekqEY4/M4C9DMvDn+UZm4w8gN6O7PN4Bmf+0fitpHaJ0PGmqeJiKabUX\"}",
+      "publicKey": "027d31dd8eb536155068b9141c13b06f2154ee140e99cc099f0bc5d24d9da7b92f",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "chambernt",
+      "name": "Chamber NT",
+      "email": "noreply@chambernt.com.au",
+      "privateKey": "3245125117804f646d66e35ca4a81ee3e6bab8ccc7ad48397155053455e1671d",
+      "encryptedKey": "{\"iv\":\"EHABSWBMiho+sbexjSKxUg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"1FJqPrbmPRWpwTEwfPyAt9W/efNPOKfaxacjTIG2UqwgBT55q9FVZNTpG59gqEZMMbkLLC7xmhF7axM8aypHd3ksHeXcorzU\"}",
+      "publicKey": "029c12f38063bfc45760e362eed85aec28537767fbff97839bbe5e095e3568609b",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "tcci",
+      "name": "Tasmanian Chamber of Commerce and Industry",
+      "email": "noreply@tcci.com.au",
+      "privateKey": "b5bf15e2004bff1977a09b41e85347a337d8eef2a4ed79ffa090810d4f292751",
+      "encryptedKey": "{\"iv\":\"YZVqWryQe1R5uF9vEmlCvw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"rEs8yD/c9ygWl+quPKva2NB2AZhYd2YdKlDNZVWLHHtgDHkuwW2rOEel+RuYIz2GzpNr/ZV/lPyreYHh9uxwXqBbZS/96oqi\"}",
+      "publicKey": "024f0edbde3327ca570d813a3a9924bde1d8cf8be23092aeb4a001000b287125c3",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "austarab",
+      "name": "Australia Arab Chamber of Commercy & Industry",
+      "email": "noreply@austarab.com.au",
+      "privateKey": "05475dd78505c1f87fd196bd4b30177e35be40d7d445b9339fed3bc269e14657",
+      "encryptedKey": "{\"iv\":\"zMQxOP+1fN3LYCQk2TpfjQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"MC9Ecm3g9P4=\",\"ct\":\"bI2rtW+EMLjLxqNrBylDOs+xBE+9/4zCsMfKBlcdk4bfxFyYBsErYgYTRx2VueoQQzm/WXRdRSGI8rhwVV04Wptod/O+iczE\"}",
+      "publicKey": "03a3a4cd9f22bb92cd714ad96eab32dd79bed7243a0ab41cb480b5c72e4b4ee604",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
     }
   ]
 }

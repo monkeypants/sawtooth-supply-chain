@@ -1,19 +1,19 @@
 [
   {
     "recordId": "1-4m-4-cert",
-    "privateKey": "1ab38027228aef9a6642d6acbf7aa62e8db18795cc09c3e03586e49396afb3df",
+    "privateKey": "59ead2dd183c7779a61169924e87bfc4fcf4333493923cf7ad1b919d79184fc7",
     "updates": []
   },
 
   {
     "recordId": "1-4m-sm0l-cert",
-    "privateKey": "1ab38027228aef9a6642d6acbf7aa62e8db18795cc09c3e03586e49396afb3df",
+    "privateKey": "59ead2dd183c7779a61169924e87bfc4fcf4333493923cf7ad1b919d79184fc7",
     "updates": []
   },
 
   {
     "recordId": "1-4m-n0t-cert",
-    "privateKey": "063f9ca21d4ef4955f3e120374f7c22272f42106c466a91d01779efba22c2cb6",
+    "privateKey": "19ed9419d8d417e3f2c39799b4186b9d9af33a10f1fa941b0c072cdf58a22a3c",
     "updates": []
   }
 ]

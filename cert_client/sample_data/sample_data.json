@@ -88,34 +88,54 @@
 
   "agents": [
     {
-      "username": "ahab",
-      "password": "ahab",
-      "publicKey": "03ba003ea48e3599f73939b7908ca361cf539cc0baa7b0a049c590bcc46e2ef55a",
-      "name": "Ahab",
-      "email": "ahab@pequod.net",
-      "privateKey": "063f9ca21d4ef4955f3e120374f7c22272f42106c466a91d01779efba22c2cb6",
-      "encryptedKey": "{\"iv\":\"sKGty1gSvZGmCwzkGy0vvg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lYT7rTJpTV0=\",\"ct\":\"taU8UNB5oJrquzEiXBV+rTTnEq9XmaO9BKeLQQWWuyXJdZ6wR9G+FYrKPkYnXc30iS/9amSG272C8qqnPdM4OE0dvjIdWgSd\"}",
-      "hashedPassword": "KNYr+guWkg77DbaWofgK72LrNdaQzzJGIkk2rEHqP9Y="
+      "username": "ha",
+      "name": "Department of Home Affairs (Australia)",
+      "email": "noreply@homeaffairs.gov.au",
+      "privateKey": "59ead2dd183c7779a61169924e87bfc4fcf4333493923cf7ad1b919d79184fc7",
+      "encryptedKey": "{\"iv\":\"PIP6pJUJZu8WnASFVaxQ1w==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"6SKVdHwZLBM=\",\"ct\":\"Pt18h90Av/r1G+JQHAP6kKP3ZUemUbZebU03FDn8txf8TGjUxUwYlmglzF0Dx0YY2dZl6Hfxeo5ehFD5sefT39UKGJu6EPYf\"}",
+      "publicKey": "03aba6e626ea785f8ed0af5db6442f914479e1fad339af4c1de86cb8072a64e84f",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
     },
     {
-      "username": "ishmael",
-      "password": "ishmael",
-      "publicKey": "02f85a333b5a7db155285bdd39d61fa1b0c65550187e22b16f5a6d2f63b7f2df6c",
-      "name": "Ishmael",
-      "email": "ishmael@pequod.net",
-      "privateKey": "1ab38027228aef9a6642d6acbf7aa62e8db18795cc09c3e03586e49396afb3df",
-      "encryptedKey": "{\"iv\":\"ao0PDb6ukW58Z6FaUDnjKQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"lAcyL1LM+Gs=\",\"ct\":\"txXSA33qYOmFmEQvL20VtbcvROLh4WWurhCaQKzsVd50x5KOyHnOzECxRlWr3VnpAErDdYRd3Nuq2jtC9KT4+DxhW2S10aeo\"}",
-      "hashedPassword": "WYvPSxUEzs0jffzHa9fqQn1Q8BbZYUVhYr5ghAL4jn4="
+      "username": "nzca",
+      "name": "New Zealand Customs Authority",
+      "email": "noreply@customs.gov.nz",
+      "privateKey": "d107c0dadd611096c5daf6e1bfe0038f0f8621a3ff254c448938a270d1faa062",
+      "encryptedKey": "{\"iv\":\"jpLikDNZZIlo5IqhGN0K4A==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"6SKVdHwZLBM=\",\"ct\":\"CbsMM6u+YUbXszkJuJI3JRGfun54rQogna6WkLBZreiyir2iesjiw+CNgfUbWiD/rDLUhjeGk9OIHM+f+eqa91YuqRjfjAIh\"}",
+      "publicKey": "03c849ba70e9e5d00f137150ab648827ab7f623566d7030de314a7afce44269005",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
     },
     {
-      "username": "starbuck",
-      "password": "starbuck",
-      "publicKey": "02c0d076f5b30e16b56d468e4f4da4be0c1ce29370b9ab850cc4a7aec0bf4dbebc",
-      "name": "Starbuck",
-      "email": "starbuck@pequod.net",
-      "privateKey": "a053435ccb852cbe0bbc1b9e6412d0393c71c367a1a4920fd5697e392e470ee0",
-      "encryptedKey": "{\"iv\":\"zzLQ+X5SdKRF5uAZFGcy1A==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"/TZy27IbJ/g=\",\"ct\":\"7vV+E3zUdgt0Qp5IPfLPQuslPQoznYAmnGCHt1NFesn1xAuDJYpl6qiP37DCJuDuWgnZvyoJ7BzxZwNzylFwwqLZVjTgXpOu\"}",
-      "hashedPassword": "jQwngNSrwaQPvjbGYYPXKrxuwUzPZXG1tRL2h6cfpco="
+      "username": "cca",
+      "name": "China Customs Authority",
+      "email": "noreply@customs.gov.cn",
+      "privateKey": "19ed9419d8d417e3f2c39799b4186b9d9af33a10f1fa941b0c072cdf58a22a3c",
+      "encryptedKey": "{\"iv\":\"fR0Kr2KQbunebApMrMUkGw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"6SKVdHwZLBM=\",\"ct\":\"4tWC0pjvFYSQWau7AsBnt84kkFoM32hKG8j286L7AzoaQhlgjfDGV9qyIJiScq4++MfoMqfDT53jh5892ZQVG09J8EFbVb1O\"}",
+      "publicKey": "03acab1f956777dda64f70c3b5bcbe82b4811d39413763a9773c4c32f00a8569c0",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "kca",
+      "name": "Korean Customs Authority",
+      "email": "noreply@customs.gov.kr",
+      "privateKey": "873b642acde541e8edfefe78bcd62d929464f9426e1d21d459d8ac279a745b04",
+      "encryptedKey": "{\"iv\":\"L6sHbqbdBAQFdelwcn0pNw==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"6SKVdHwZLBM=\",\"ct\":\"UxCQfki1AgN687PHRj5jb5BVW/Q8HRGKs/8+Pkalj4aX8lfIE6VqSk18836FfNXoH9KFdOFx+ArqBy3upDTRylKxCx7FbZQt\"}",
+      "publicKey": "0399a963ecb85f81d53adf560b60f831acd67890aa0ddaab6d6ed9b79d2e6385d8",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
+    },
+    {
+      "username": "chca",
+      "name": "Chilean Customs Authority",
+      "email": "noreply@customs.gov.cl",
+      "privateKey": "5228f4c59db4fc8c5ab29d53ad45609ad4c8db9005dd11525fe0baaae6cde6e8",
+      "encryptedKey": "{\"iv\":\"7jME7AH2COtOieJMMrCacg==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"6SKVdHwZLBM=\",\"ct\":\"KGhnOqeo1u3GJlq+MvaUrj7aPElqeKDs23KT1531mrispk8fPVKgyjjzI4QaTBVQNealBsW68Bpw9+Hg0OlrEpOSjkAoBg8A\"}",
+      "publicKey": "025911cb45683cbd33b8884e811e1aed92d943f6989a2fa4c540876e437c2c9ff6",
+      "hashedPassword": "lD6FEeRJNicKzj54JQrl5vut/ApWCvvufQbcusIh//Y=",
+      "password": "psx"
     }
   ]
 }

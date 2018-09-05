@@ -9,4 +9,4 @@ curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compos
 chmod +x /usr/local/bin/docker-compose
 
 # Run the docker-compose up
-docker-compose -f ${CURDIR}/docker-compose.yaml up -d
+docker-compose -f ${CURDIR}/docker-compose-installed.yaml up -d

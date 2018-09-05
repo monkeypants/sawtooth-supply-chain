@@ -4,12 +4,12 @@
     "properties": [
         {
           "name": "cert_type",
-          "dataType": 4,
-          "required": true
-        },
-        {
-          "name": "cert_sub_type",
-          "dataType": 4,
+          "dataType": 5,
+          "enumOptions": [
+            "Certificate of Origin - ChAFTA",
+            "Certificate of Origin - KAFTA",
+            "Certificate of Origin - Chile"
+          ],
           "required": true
         },
         {

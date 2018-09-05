@@ -24,6 +24,7 @@ const parsing = require('../services/parsing')
 const {MultiSelect} = require('../components/forms')
 const layout = require('../components/layout')
 
+const core_types = require('../../sample_data/core_types.json')
 /**
  * Possible selection options
  */
@@ -35,6 +36,10 @@ const layout = require('../components/layout')
  *]
  */
 const authorizableProperties = []
+
+const certificateOptions = core_types
+  .find(type => type.name === 'certificate').properties
+  .find(type => type.name === 'cert_type').enumOptions
 
 
 /**
@@ -72,22 +77,27 @@ const AddCertForm = {
                }),
                value: vnode.state.serialNumber
              })),
-             layout.row([
-               _formGroup('Certificate Type (e.g. Certificate of Origin)', m('input.form-control', {
-                 type: 'text',
-                 oninput: m.withAttr('value', (value) => {
-                   vnode.state.cert_type = value
-                 }),
-                 value: vnode.state.cert_type
-               })),
-                  _formGroup('Certificate SubType (e.g. ChAFTA)', m('input.form-control', {
-                  type: 'text',
-                  oninput: m.withAttr('value', (value) => {
-                    vnode.state.cert_sub_type = value
-                  }),
-                  value: vnode.state.cert_sub_type
-                })),
-            ]),
+
+            layout.row([
+              _formGroup(
+                'Certificate Type (e.g. Certificate of Origin)',
+                m('select.form-control', {
+                  onchange: m.withAttr('value', (value) => {
+                    vnode.state.cert_type = value
+                  })}, [
+                    m('option', { disabled: true, value: '', selected: 'selected' }),
+                    certificateOptions.map((opt) => (
+                      m('option', {
+                        value: opt
+                      }, opt)
+                    ))
+                  ])
+              )]),
+
+
+
+
+
             layout.row([
               _formGroup('Harmonized Tariff Code', m('input.form-control', {
                 type: 'text',
@@ -295,13 +305,8 @@ const _handleSubmit = (signingKey, state) => {
     properties: [
       {
         name: 'cert_type',
-        stringValue: state.cert_type,
-        dataType: payloads.createRecord.enum.STRING
-      },
-      {
-        name: 'cert_sub_type',
-        stringValue: state.cert_sub_type,
-        dataType: payloads.createRecord.enum.STRING
+        enumValue: state.cert_type,
+        dataType: payloads.createRecord.enum.ENUM
       },
       {
         name: 'tariff_code',

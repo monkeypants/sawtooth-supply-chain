@@ -6,13 +6,8 @@
       "properties": [
           {
             "name": "cert_type",
-            "dataType": 4,
-            "stringValue": "ABC"
-          },
-          {
-            "name": "cert_sub_type",
-            "dataType": 4,
-            "stringValue": "DEF"
+            "dataType": 5,
+            "enumValue": "Certificate of Origin - ChAFTA"
           },
           {
             "name": "certificate_number",
@@ -36,13 +31,8 @@
       "properties": [
           {
             "name": "cert_type",
-            "dataType": 4,
-            "stringValue": "XYZ"
-          },
-          {
-            "name": "cert_sub_type",
-            "dataType": 4,
-            "stringValue": "123"
+            "dataType": 5,
+            "enumValue": "Certificate of Origin - KAFTA"
           },
           {
             "name": "certificate_number",
@@ -63,13 +53,8 @@
       "properties": [
           {
             "name": "cert_type",
-            "dataType": 4,
-            "stringValue": "ABC"
-          },
-          {
-            "name": "cert_sub_type",
-            "dataType": 4,
-            "stringValue": "DEF"
+            "dataType": 5,
+            "enumValue": "Certificate of Origin - Chile"
           },
           {
             "name": "certificate_number",

@@ -630,7 +630,6 @@ const CertDetail = {
 // -           : null)),
 
         _row(_labelProperty('Certificate Type (e.g. Ceritificate of Origin)', getPropertyValue(record, 'cert_type'))),
-        _row(_labelProperty('Certificate SubType (e.g. ChAFTA)', getPropertyValue(record, 'cert_sub_type'))),
         _row(_labelProperty('Harmonized Tariff Code', getPropertyValue(record, 'tariff_code'))),
         _row(_labelProperty('Certificate Number', getPropertyValue(record, 'certificate_number'))),
         _row(_labelProperty('Producer', getPropertyValue(record, 'producer'))),

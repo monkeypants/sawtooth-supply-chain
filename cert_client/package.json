@@ -34,6 +34,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
     "css-loader": "^0.28.5",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",

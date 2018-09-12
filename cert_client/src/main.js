@@ -19,7 +19,7 @@
 // These requires inform webpack which styles to build
 require('bootstrap')
 require('../styles/main.scss')
-
+require('@babel/polyfill')
 const m = require('mithril')
 
 const api = require('./services/api')
